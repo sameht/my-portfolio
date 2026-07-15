@@ -1,1 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+
+/* 1. Tell Tailwind V4 to use the 'dark' class on <html> */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-brand-bg: #020617;
+  --color-card-bg: #0f172a;
+}
+
+@layer base {
+  /* 2. Default styles (Light Mode) */
+  :root {
+    background-color: #ffffff;
+    color: #0f172a;
+  }
+
+  /* 3. Dark Mode styles */
+  .dark {
+    background-color: #020617;
+    color: #f8fafc;
+  }
+}
