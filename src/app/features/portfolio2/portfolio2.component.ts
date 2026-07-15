@@ -1,14 +1,14 @@
 import { Component, effect, inject, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { ThemeService } from './services/theme.service';
+import { ThemeService } from './../../services/theme.service';
 
 @Component({
-  selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.html',
-  styleUrl: './app.scss'
+  selector: 'app-portfolio2.component',
+  imports: [],
+  templateUrl: './portfolio2.component.html',
+  styleUrl: './portfolio2.component.scss',
 })
-export class App {
+export class Portfolio2Component {
+
   public themeService = inject(ThemeService);
   theme = signal<'light' | 'dark'>(
     (localStorage.getItem('theme') as 'light' | 'dark') || 'dark'
