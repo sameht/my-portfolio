@@ -508,17 +508,18 @@
 
         }
         @else if(project.media?.type === 'video') {
-
-
-        <div class="
-              aspect-[16/10]
-              overflow-hidden bg-muted">
-
-
-          <video [src]="project.media?.src" [poster]="project.media?.poster" muted loop playsinline
-            class="h-full w-full object-cover" (mouseenter)="playVideo(i)" (mouseleave)="pauseVideo(i)">
-          </video>
-
+        <div class="aspect-[16/10] overflow-hidden bg-muted">
+          <video
+    #video
+    [src]="project.media?.src"
+    [poster]="project.media?.poster"
+    muted
+    loop
+    playsinline
+    class="h-full w-full object-cover"
+    (mouseenter)="video.play()"
+    (mouseleave)="video.pause()">
+</video>
 
         </div>
 
