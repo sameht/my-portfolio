@@ -134,9 +134,12 @@ export class PortfolioComponent implements OnInit, AfterViewInit {
         '.NET Core',
         'PostgreSQL',
         'RxJS'
-      ]
+      ],
+      media: {
+        type: 'video',
+        src: 'assets/videos/video_cap.mp4'
+      }
     },
-
     {
       title: 'Wipro Talent Analytics',
       client: 'EDLIGO · Wipro',
